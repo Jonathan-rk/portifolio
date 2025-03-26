@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(26, 55, 109);
+}
+.Navbar {
+    background-color: rgb(0, 174, 255,0.3);
+    padding: 10px;
+    color: #ffffff;
+    display: flex;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Navbar__sobre {
+    padding-left: 320px;
+    padding-right: 10px;
+}
+
+.Navbar__projetos {
+    padding-right: 10px;
+}
+
+.Navbar__contato {
+    padding-right: 10px;
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+.simple-card {
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow: hidden;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+  
+.simple-card .card-img-top {
+    width: 60%;
+    height: auto;
+}
+  
+.simple-card .card-body {
+    padding: 15px;
+}
+  
+.simple-card .card-text {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
+}
+  
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
