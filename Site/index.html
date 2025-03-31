@@ -1,71 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfólio de Jonathan</title>
+    <!-- Link para o CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container"> <!-- Cabeçalho --> 
-        <header class="cabecario"> 
-            <div class="Navbar">
-                <nav class="Navbar__Items">
-                  <div class="Navbar__name">
-                    Jonathan
-                  </div>
-                  </nav>
-                  
-                  <nav>
-                  <div class="Navbar__sobre">
-                    <a href="#">Sobre Mim</a>
-                  </div>
-                  </nav>
-        
-                  <nav>
-                  <div class="Navbar__projetos">
-                    <a href="#">Projetos</a>
-                  </div>
-                  </nav>
-        
-                  <nav>
-                  <div class="Navbar__contato">
-                    <a href="#">Contato</a>
-                  </div>
-                  </nav>
-                </nav>
+    <!-- Container principal - centraliza o conteúdo -->
+    <div class="container"> 
+        <!-- CABEÇALHO --> 
+        <header class="row">
+            <div class="col-12"> 
+                <!-- Barra de navegação -->
+                <div class="Navbar">
+                    <!-- Nome do site -->
+                    <div class="Navbar__name">
+                        Jonathan
+                    </div>
+                    
+                    <!-- Links de navegação -->
+                    <div class="Navbar__links">
+                        <a href="#sobre" class="Navbar__item">Sobre Mim</a>
+                        <a href="#projetos" class="Navbar__item">Projetos</a>
+                        <a href="#contato" class="Navbar__item">Contato</a>
+                    </div>
+                </div>
             </div>
         </header> 
-        <!-- Sobre Mim --> 
-         <section id="sobre"> 
-           
-           <div class="quadrado">
-            <img src="img/1840618-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-gratis-vetor.jpg" alt="">
-           </div>
 
-           <div class="texto"> 
-            <h3>Sobre Mim</h3>
-            <P>Tenho 17 anos ...</P>
-           </div>
-
-         </section> 
-        <!-- Projetos --> 
-        <section id="projetos" class="projetos"> 
-            <div class="card simple-card" style="width: 18rem;">
-                <img class="card-img-top" src="img/1840618-imagem-perfil-icone-masculino-icone-humano-ou-pessoa-sinal-e-simbolo-gratis-vetor.jpg" alt="Imagem do projeto">
-                <div class="card-body">
-                  <p class="card-text">Descrição simples do projeto ou qualquer outro texto que você queira incluir aqui.</p>
+        <!-- SEÇÃO SOBRE MIM --> 
+        <section id="sobre" class="row"> 
+            <!-- Coluna da foto (4/12 = 1/3 da largura) -->
+            <div class="col-4">
+                <div class="quadrado">
+                    <img src="img/perfil.jpg" alt="Foto de Jonathan">
                 </div>
-              </div>              
+            </div>
+            
+            <!-- Coluna do texto (8/12 = 2/3 da largura) -->
+            <div class="col-8">
+                <div class="texto"> 
+                    <h3>Jonathan Redmerski Kalinoski</h3>
+                    <h3>Sobre Mim</h3>
+                    <p>Tenho 17 anos e estou cursando técnico em desenvolvimento de sistemas.</p>
+                </div>
+            </div>
         </section> 
-        <!-- Contato --> 
-         <section id="contato" class="..."> 
 
-         </section> 
-        <!-- Rodapé --> 
-         <footer class="..."> 
-
-         </footer> 
+        <!-- SEÇÃO PROJETOS --> 
+        <section id="projetos" class="row"> 
+            <!-- Título da seção (ocupa toda a largura) -->
+            <div class="col-12">
+                <h2 class="texto">Projetos</h2>
+            </div>
+            
+            <!-- CARD 1 (1/3 da largura) -->
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-text">
+                            Prototipação Loja de eletrônicos
+                        </h3>
+                        <p class="desc">Antes do desenvolvimento do site, realizei a Prototipação, criando um layout para o site.</p>
+                        <a class="link-pj" href="#">Ver projeto</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CARD 2 (1/3 da largura) -->
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-text">
+                            S.A loja de eletrônicos
+                        </h3>
+                        <p class="desc">Desenvolvimento de sistema para gerenciamento de loja.</p>
+                        <a class="link-pj" href="#">Ver projeto</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CARD 3 (1/3 da largura) -->
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-text">
+                            Site loja de eletrônicos
+                        </h3>
+                        <p class="desc">Em andamento</p>
+                        <a class="link-pj" href="#">Ver projeto</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        
+        <!-- SEÇÃO CONTATO --> 
+        <section id="contato" class="row"> 
+            <div class="col-12">
+                <h2 class="texto">Contatos</h2>
+                <!-- Links de contato lado a lado -->
+                <div class="social-container">
+                    <a href="https://github.com/Jonathan-rk" class="social-link">
+                        <i class="icon-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonathan-redmerski-kalinoski-7830aa2b0/" class="social-link">
+                        <i class="icon-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section> 
+        
+        <!-- RODAPÉ --> 
+        <footer class="row"> 
+            <div class="col-12">
+                <p class="texto">© 2023 Jonathan Redmerski Kalinoski</p>
+            </div>
+        </footer> 
     </div> 
 </body>
 </html>
