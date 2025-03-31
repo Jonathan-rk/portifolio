@@ -1,29 +1,75 @@
+* {
+    box-sizing: border-box; /* Faz com que padding e border sejam incluídos na largura/altura */
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(26, 55, 109);
+    color: white;
 }
+
+.container {
+    width: 1200px; /* Largura fixa para site não responsivo */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 15px;
+}
+
+/* Row (linha) organiza as colunas horizontalmente */
+.row {
+    display: flex; /* Ativa o flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    margin: 0 -15px; /* Compensa o padding das colunas */
+    margin-bottom: 30px; /* Espaço entre as seções */
+}
+
+/* Definição das colunas - sistema de 12 colunas */
+.col-4 {
+    width: 33.33%; /* 4/12 = 33.33% da largura */
+    padding: 0 15px;
+}
+
+.col-8 {
+    width: 66.67%; /* 8/12 = 66.67% da largura */
+    padding: 0 15px;
+}
+
+.col-12 {
+    width: 100%; /* 12/12 = 100% da largura */
+    padding: 0 15px;
+}
+
 .Navbar {
-    background-color: rgb(0, 174, 255,0.3);
-    padding: 10px;
-    color: #ffffff;
+    background-color: rgba(0, 174, 255, 0.3);
+    padding: 15px;
     display: flex;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between; /* Espaça os itens */
+    align-items: center; /* Centraliza verticalmente */
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 20px;
 }
 
-.Navbar__sobre {
-    padding-left: 320px;
-    padding-right: 10px;
+.Navbar__name {
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.Navbar__projetos {
-    padding-right: 10px;
+.Navbar__links {
+    display: flex;
+    gap: 20px; /* Espaço entre os links */
 }
 
-.Navbar__contato {
-    padding-right: 10px;
+.Navbar__item {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.Navbar__item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 .quadrado {
@@ -31,38 +77,92 @@ body {
     height: 200px;
     margin: 20px auto;
     border-radius: 10px;
-  }
-  
-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-  }
+    overflow: hidden; /* Mantém a imagem dentro do quadrado */
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
 
-.simple-card {
-    border-radius: 8px;
-    background-color: #ffffff;
-    overflow: hidden;
-    margin: 15px;
-    transition: transform 0.3s ease;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-radius: 7px;
 }
-  
-.simple-card .card-img-top {
-    width: 60%;
-    height: auto;
-}
-  
-.simple-card .card-body {
-    padding: 15px;
-}
-  
-.simple-card .card-text {
-    color: #000000;
+
+.texto {
+    color: #f3dede;
     font-size: 16px;
     line-height: 1.5;
+    text-align: center;
 }
-  
-a {
-    color: #ffffff;
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.card-text {
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.desc {
+    color: #333;
+    text-align: center;
+    min-height: 60px; /* Altura mínima para alinhar os botões */
+}
+
+.link-pj {
+    display: block;
+    background-color: rgb(26, 55, 109);
+    color: white;
     text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.link-pj:hover {
+    background-color: rgb(38, 79, 156);
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espaço entre os links */
+    margin: 20px 0;
+}
+
+.social-link {
+    display: inline-block;
+    background-color: rgba(0, 174, 255, 0.3);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: rgba(0, 174, 255, 0.6);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 50px;
 }
